@@ -25,9 +25,18 @@
     // with these React API calls
     // 💰 The example in the markdown file should be a good hint for you.
 
-    const divProps = {className: 'container', children: 'Hello World'}
-    const divElement = React.createElement('div', divProps)
+    const span1 = React.createElement('span', {}, 'Hello')
+    const span2 = React.createElement('span', {}, 'World')
+    const container = React.createElement(
+      'div',
+      {
+        className: 'container',
+      },
+      span1,
+      ' ',
+      span2,
+    )
     // This is similar to ReactDOM.createRoot().render()
-    ReactDOM.createRoot(rootElement).render(divElement)
+    ReactDOM.createRoot(rootElement).render(container)
   </script>
 </body>
